@@ -1,0 +1,77 @@
+/* ── Mobile (portrait phones) ── */
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 64px;
+    --section-padding: clamp(1.75rem, 5vw, 2.5rem);
+    --container-width: 100%;
+  }
+
+  .container,
+  .container--wide {
+    width: min(100% - 1.25rem, 100%);
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+/* ── Tablets ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --section-padding: clamp(2rem, 4vw, 3rem);
+    --container-width: 720px;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .packages-grid .package-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* ── Laptops ── */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --container-width: 960px;
+  }
+}
+
+/* ── Large screens / TVs ── */
+@media (min-width: 1440px) {
+  :root {
+    --container-width: 1280px;
+    --container-width-wide: 1600px;
+    --section-padding: clamp(2.5rem, 3vw, 4rem);
+  }
+
+  .packages-grid {
+    gap: var(--gap-lg);
+  }
+}
+
+/* ── Ultra-wide / TV ── */
+@media (min-width: 1920px) {
+  :root {
+    --container-width: 1440px;
+    --container-width-wide: 1800px;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+}
+
+/* Touch-friendly tap targets on mobile/tablet */
+@media (max-width: 1023px) {
+  .btn {
+    min-height: 44px;
+  }
+}

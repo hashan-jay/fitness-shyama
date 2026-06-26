@@ -39,7 +39,7 @@ function Contact() {
             <SectionHeading
               eyebrow="Visit Us"
               title="Find Your Rhythm Here"
-              subtitle="Drop by our studio in Nayakakanda or message us — we're always happy to welcome new faces."
+              subtitle="Drop by our studio on Hendala Road or message us — we're always happy to welcome new faces."
               align="left"
             />
 
@@ -48,7 +48,11 @@ function Contact() {
                 <span className="contact-page__card-icon">📍</span>
                 <div>
                   <h4>Location</h4>
-                  <p>{SITE.address}</p>
+                  <p>
+                    <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
+                      {SITE.address}
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="contact-page__card">
@@ -99,7 +103,7 @@ function Contact() {
             <div className="contact-page__map">
               <iframe
                 title="Fitness with Shyama location map"
-                src="https://maps.google.com/maps?q=Nayakakanda,+Wattala,+Sri+Lanka&output=embed"
+                src={SITE.mapsEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

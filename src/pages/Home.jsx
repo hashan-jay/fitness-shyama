@@ -136,7 +136,7 @@ function Home() {
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
             >
               <span>Since</span>
-              <strong>2019</strong>
+              <strong>2023</strong>
             </motion.div>
           </motion.div>
 

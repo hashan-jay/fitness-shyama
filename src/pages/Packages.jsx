@@ -32,7 +32,7 @@ function Packages() {
       <PageHero
         title="Membership Packages"
         subtitle="Find the perfect plan to match your rhythm, schedule, and goals."
-        image={images.danceEnergy}
+        image={images.packageElite}
         breadcrumb="Packages"
       />
 

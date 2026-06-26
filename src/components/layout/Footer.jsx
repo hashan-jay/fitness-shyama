@@ -1,9 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { SITE, NAV_LINKS, CREDITS } from '../../config/site';
 import './Footer.css';
 
+function scrollToTop() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+  });
+}
+
 function Footer({ onJoinClick }) {
   const year = new Date().getFullYear();
+  const location = useLocation();
+
+  const handleSamePageClick = (path) => (event) => {
+    if (location.pathname === path) {
+      event.preventDefault();
+      scrollToTop();
+    }
+  };
 
   return (
     <footer className="footer">
@@ -11,11 +28,11 @@ function Footer({ onJoinClick }) {
 
       <div className="container footer__grid">
         <div className="footer__brand">
-          <Link to="/" className="footer__logo">
+          <Link to="/" className="footer__logo" onClick={handleSamePageClick('/')}>
             <span aria-hidden="true">✦</span> {SITE.name}
           </Link>
           <p className="footer__tagline">
-            Empowering women through the joy of Zumba — one beat at a time in {SITE.location}.
+            Empowering women through the joy of Zumba — one beat at a time in Wattala.
           </p>
           <button className="footer__join-link" onClick={onJoinClick}>
             Join the movement →
@@ -27,7 +44,9 @@ function Footer({ onJoinClick }) {
           <ul>
             {NAV_LINKS.map((link) => (
               <li key={link.path}>
-                <Link to={link.path}>{link.label}</Link>
+                <Link to={link.path} onClick={handleSamePageClick(link.path)}>
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -36,7 +55,11 @@ function Footer({ onJoinClick }) {
         <div className="footer__contact">
           <h3 className="footer__heading">Visit Us</h3>
           <address>
-            <p>{SITE.address}</p>
+            <p>
+              <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
+                {SITE.address}
+              </a>
+            </p>
             <p>
               <a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a>
             </p>

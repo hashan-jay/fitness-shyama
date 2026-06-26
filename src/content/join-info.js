@@ -4,7 +4,7 @@ export const joinInfo = {
   points: [
     'Certified Zumba instruction with Shyama',
     'Women-focused, welcoming environment',
-    'Located in Nayakakanda, Wattala',
+    'Located at 122 Hendala Rd, Wattala',
     'Flexible packages for every lifestyle',
     'No experience needed — just bring your energy',
   ],

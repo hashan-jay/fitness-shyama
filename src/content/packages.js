@@ -6,7 +6,7 @@ export const packages = [
     tagline: 'Perfect for beginners',
     image: images.packageGlow,
     features: [
-      '8 Zumba sessions per month',
+      '3 Zumba sessions per week',
       'Beginner-friendly routines',
       'Access to changing rooms',
       'Welcome orientation session',
@@ -18,7 +18,7 @@ export const packages = [
     tagline: 'Most loved by our members',
     image: images.packagePower,
     features: [
-      'Unlimited Zumba classes',
+      '4 Zumba sessions per week',
       'Priority class booking',
       'Monthly body-progress check-in',
       'Exclusive member events',
@@ -35,7 +35,7 @@ export const packages = [
       'Personalized workout plan',
       '1-on-1 session with Shyama monthly',
       'Nutrition guidance basics',
-      'VIP lounge access',
+      'VIP daily fitness checkups',
     ],
     featured: false,
   },

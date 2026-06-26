@@ -16,7 +16,7 @@ function About() {
       <PageHero
         title="About Shyama"
         subtitle="The heart, soul, and rhythm behind Fitness with Shyama."
-        image={images.instructor}
+        image={images.abouthero}
         breadcrumb="Our Story"
       />
 
@@ -47,14 +47,14 @@ function About() {
               align="left"
             />
             <p>
-              Located in the heart of <strong>{SITE.location}</strong>, our studio has become a
+              Located in the heart of <strong>Nayakakanda, Wattala</strong>, our studio has become a
               sanctuary for women who want to move, sweat, and celebrate their bodies. Shyama,
               our founder and lead instructor, brings years of certified Zumba experience and an
               infectious energy that transforms every class into a party.
             </p>
             <p>
               What started as a small group of friends dancing in a community hall has grown into
-              a vibrant fitness family of over 500 members — all united by the love of music,
+              a vibrant fitness family of over 100 members — all united by the love of music,
               movement, and mutual support.
             </p>
             <p>

@@ -5,7 +5,7 @@ export const amenities = [
     title: 'Zumba Studio',
     description: 'Spacious, mirror-lined studio with premium sound for every beat-driven session.',
     icon: '💃',
-    image: images.zumbaClass,
+    image: images.studio,
   },
   {
     title: 'Changing Rooms',
@@ -17,19 +17,21 @@ export const amenities = [
     title: 'Air-Conditioned Space',
     description: 'Stay cool and comfortable while you move — perfect for Sri Lanka\'s warm days.',
     icon: '🌬️',
-    image: images.studio,
+    image: images.ac,
   },
+  /*
   {
     title: 'Free Parking',
-    description: 'Convenient parking near Nayakakanda so your workout starts stress-free.',
+    description: 'Convenient parking at 122 Hendala Rd, Wattala so your workout starts stress-free.',
     icon: '🅿️',
     image: images.groupFitness,
   },
+  */
   {
     title: 'Fresh Water Station',
     description: 'Hydration on tap — because every queen needs her water breaks.',
     icon: '💧',
-    image: images.danceEnergy,
+    image: images.water,
   },
   {
     title: 'Community Lounge',

@@ -7,7 +7,7 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
 export const SITE = {
   name: 'Fitness with Shyama',
   tagline: 'Dance. Sweat. Shine.',
-  location: '122 Hendala Rd, Wattala',
+  location: 'No.122, Hendala Rd, Wattala',
   address: 'Fitness with Shyama, 122 Hendala Rd, Wattala, Sri Lanka',
   phone: '+94 75 045 1786',
   email: 'hello@fitwithshyama.xyz',

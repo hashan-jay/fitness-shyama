@@ -70,7 +70,7 @@ function Footer({ onJoinClick }) {
 
       <div className="container footer__bottom">
         <p>&copy; {year} {SITE.name}. All rights reserved.</p>
-        <p className="footer__credit"><a href="https://www.linkedin.com/company/zyntaks" target="_blank">{CREDITS.developer}</a></p>
+        <p className="footer__credit"><a href="https://www.zyntaks.lk" target="_blank">{CREDITS.developer}</a></p>
       </div>
     </footer>
   );

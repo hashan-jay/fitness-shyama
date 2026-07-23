@@ -3,7 +3,7 @@ export const images = {
   hero: '/images/hero-women-fitness.jpg',
   zumbaClass: '/images/home-banner.jpg',
   danceEnergy: '/images/home-banner.jpg',
-  groupFitness: '/images/zumba-grpfit.jpeg',
+  groupFitness: '/images/cta-women-fitness.jpg',
   studio: '/images/zumba-studio.jpg',
   wellness: '/images/change-room.jpg',
   ac: '/images/zumba-ac.jpg',

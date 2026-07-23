@@ -1,8 +1,8 @@
 export const fadeUp = {
-  initial: { opacity: 0, y: 36 },
+  initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-40px' },
-  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+  viewport: { once: true, margin: '-12% 0px -8% 0px', amount: 0.2 },
+  transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
 };
 
 export const fadeIn = {
@@ -20,16 +20,16 @@ export const scaleIn = {
 };
 
 export const slideLeft = {
-  initial: { opacity: 0, x: -40 },
+  initial: { opacity: 0, x: -24 },
   whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.15 },
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
 };
 
 export const slideRight = {
-  initial: { opacity: 0, x: 40 },
+  initial: { opacity: 0, x: 24 },
   whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true },
+  viewport: { once: true, amount: 0.15 },
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
 };
 

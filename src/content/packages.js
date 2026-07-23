@@ -5,6 +5,7 @@ export const packages = [
     name: 'Glow Starter',
     tagline: 'Perfect for beginners',
     image: images.packageGlow,
+    imagePosition: '50% 20%',
     features: [
       '3 Zumba sessions per week',
       'Beginner-friendly routines',
@@ -17,6 +18,7 @@ export const packages = [
     name: 'Power Queen',
     tagline: 'Most loved by our members',
     image: images.packagePower,
+    imagePosition: '72% 48%',
     features: [
       '4 Zumba sessions per week',
       'Priority class booking',
@@ -30,6 +32,7 @@ export const packages = [
     name: 'Elite Rhythm',
     tagline: 'For the dedicated dancer',
     image: images.packageElite,
+    imagePosition: '55% 22%',
     features: [
       'Unlimited Zumba + specialty classes',
       'Personalized workout plan',

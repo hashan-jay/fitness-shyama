@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { WHATSAPP_URL, SITE } from '../config/site';
 import { joinInfo } from '../content/join-info';
 import { images } from '../config/images';
+import { getLenis } from '../utils/scroll';
 import Button from './ui/Button';
 import './JoinNowModal.css';
 
@@ -14,6 +16,22 @@ function WhatsAppIcon() {
 }
 
 function JoinNowModal({ isOpen, onClose }) {
+  useEffect(() => {
+    const lenis = getLenis();
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      lenis?.stop();
+    } else {
+      document.body.style.overflow = '';
+      lenis?.start();
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      getLenis()?.start();
+    };
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -47,8 +65,7 @@ function JoinNowModal({ isOpen, onClose }) {
             </button>
 
             <div className="join-modal__image">
-              <img src={images.danceEnergy} alt="Women enjoying a Zumba fitness class" />
-              <div className="join-modal__image-overlay" />
+              <img src={images.danceEnergy} alt="Zumba Fitness with Shyama promotional flyer" />
             </div>
 
             <div className="join-modal__body">

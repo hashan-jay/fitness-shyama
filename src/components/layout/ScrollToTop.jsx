@@ -1,17 +1,16 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { scrollToTop } from '../../utils/scroll';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    // Small delay lets Lenis mount before route jumps
+    const id = requestAnimationFrame(() => {
+      scrollToTop({ immediate: false });
     });
+    return () => cancelAnimationFrame(id);
   }, [pathname]);
 
   return null;

@@ -32,6 +32,7 @@ function PackageCard({ pkg, index = 0, variant = 'dark', featureLimit }) {
           src={pkg.image}
           alt={`${pkg.name} — Zumba fitness package`}
           loading="lazy"
+          style={{ objectPosition: pkg.imagePosition || 'center 20%' }}
           whileHover={{ scale: 1.08 }}
           transition={{ duration: 0.5 }}
         />

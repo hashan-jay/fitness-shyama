@@ -26,75 +26,55 @@ function Home() {
         />
         <div className="hero__overlay" aria-hidden="true" />
 
-        <motion.div
-          className="hero__orb hero__orb--1"
-          animate={{ y: [0, -24, 0], x: [0, 14, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="hero__orb hero__orb--2"
-          animate={{ y: [0, 18, 0], x: [0, -18, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="hero__orb hero__orb--3"
-          animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.9, 1.15, 0.9] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        />
-
         <div className="container hero__content">
-          <motion.span
-            className="hero__eyebrow"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+          <motion.p
+            className="hero__brand"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            Zumba Fitness · {SITE.location}
-          </motion.span>
+            {SITE.name}
+          </motion.p>
 
           <motion.h1
             className="hero__title"
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.08 }}
           >
-            Move with <span className="gradient-text animate-gradient">Passion</span>,<br />
-            Shine with <span className="gradient-text animate-gradient">Power</span>
+            Move with Passion,<br />
+            Shine with Power
           </motion.h1>
 
           <motion.p
             className="hero__subtitle"
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.16 }}
           >
-            {SITE.name} is a women-focused Zumba studio where every class feels like a
-            celebration. Dance your way to confidence, strength, and joy.
+            A women-focused Zumba studio in Wattala where every class feels like a
+            celebration — dance your way to confidence, strength, and joy.
           </motion.p>
 
           <motion.div
             className="hero__actions"
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.24 }}
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-              <Button variant="primary" size="lg" onClick={openJoin}>
-                Join Now
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-              <Button variant="outline" size="lg" href="/packages">
-                View Packages
-              </Button>
-            </motion.div>
+            <Button variant="primary" size="lg" onClick={openJoin}>
+              Join Now
+            </Button>
+            <Button variant="outline" size="lg" href="/packages">
+              View Packages
+            </Button>
           </motion.div>
         </div>
 
         <motion.div
           className="hero__scroll"
-          animate={{ y: [0, 10, 0], opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate={{ y: [0, 8, 0], opacity: [0.45, 0.9, 0.45] }}
+          transition={{ duration: 2.2, repeat: Infinity }}
           aria-hidden="true"
         >
           <span>Scroll</span>
@@ -108,11 +88,10 @@ function Home() {
             <motion.div
               key={stat.label}
               className="stats-bar__item"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.45, type: 'spring', stiffness: 120 }}
-              whileHover={{ scale: 1.06, transition: { duration: 0.2 } }}
+              transition={{ delay: i * 0.06, duration: 0.45 }}
             >
               <span className="stats-bar__value">{stat.value}</span>
               <span className="stats-bar__label">{stat.label}</span>
@@ -127,17 +106,9 @@ function Home() {
             <motion.img
               src={images.zumbaClass}
               alt="Women dancing in a Zumba class"
-              whileHover={{ scale: 1.04 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.6 }}
             />
-            <motion.div
-              className="about-preview__badge"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <span>Since</span>
-              <strong>2023</strong>
-            </motion.div>
           </motion.div>
 
           <motion.div className="about-preview__content" {...slideRight}>
@@ -152,7 +123,7 @@ function Home() {
               dancer, our classes are designed to make you feel strong, beautiful, and unstoppable.
             </p>
             <Link to="/about" className="about-preview__link">
-              Meet Shyama →
+              Meet Shyama
             </Link>
           </motion.div>
         </div>
@@ -171,22 +142,19 @@ function Home() {
               <motion.article
                 key={item.title}
                 className="amenity-card"
-                initial={{ opacity: 0, y: 36, rotateY: -8 }}
-                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.55 }}
-                whileHover={{ y: -8, transition: { duration: 0.25 } }}
               >
                 <div className="amenity-card__image">
                   <motion.img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.06 }}
+                    transition={{ duration: 0.55 }}
                   />
-                  <div className="amenity-card__image-overlay" />
-                  <span className="amenity-card__icon">{item.icon}</span>
                 </div>
                 <div className="amenity-card__body">
                   <h3>{item.title}</h3>
@@ -240,11 +208,10 @@ function Home() {
               <motion.blockquote
                 key={t.name}
                 className="testimonial-card"
-                initial={{ opacity: 0, y: 36 }}
+                initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.55 }}
-                whileHover={{ y: -6, boxShadow: '0 12px 40px rgba(192, 38, 211, 0.18)' }}
               >
                 <span className="testimonial-card__quote" aria-hidden="true">"</span>
                 <p>{t.quote}</p>
@@ -266,22 +233,12 @@ function Home() {
         />
         <div className="cta-banner__overlay" aria-hidden="true" />
         <div className="container cta-banner__content">
-          <motion.div
-            {...fadeUp}
-            whileInView={{ scale: [0.98, 1] }}
-            viewport={{ once: true }}
-          >
+          <motion.div {...fadeUp}>
             <h2>Your First Step Starts Today</h2>
             <p>Join hundreds of women who dance, sweat, and shine at {SITE.location}.</p>
-            <motion.div
-              animate={{ scale: [1, 1.04, 1] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ display: 'inline-block' }}
-            >
-              <Button variant="primary" size="lg" onClick={openJoin}>
-                Join Now
-              </Button>
-            </motion.div>
+            <Button variant="primary" size="lg" onClick={openJoin}>
+              Join Now
+            </Button>
           </motion.div>
         </div>
       </section>

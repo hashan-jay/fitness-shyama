@@ -70,7 +70,7 @@ function Packages() {
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                whileHover={{ y: -4, borderColor: 'rgba(232, 121, 249, 0.35)' }}
+                whileHover={{ y: -2 }}
               >
                 <h4>{item.q}</h4>
                 <p>{item.a}</p>

@@ -1,15 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { SITE, NAV_LINKS, CREDITS } from '../../config/site';
+import { scrollToTop } from '../../utils/scroll';
 import './Footer.css';
-
-function scrollToTop() {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: prefersReducedMotion ? 'auto' : 'smooth',
-  });
-}
 
 function Footer({ onJoinClick }) {
   const year = new Date().getFullYear();

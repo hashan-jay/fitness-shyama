@@ -95,7 +95,7 @@ function JoinNowModal({ isOpen, onClose }) {
                   Join Now on WhatsApp
                 </Button>
                 <p className="join-modal__note">
-                  Chat directly with Shyama · {SITE.phone}
+                  Chat directly with Shyama
                 </p>
               </div>
             </div>

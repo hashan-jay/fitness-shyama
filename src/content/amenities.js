@@ -19,14 +19,6 @@ export const amenities = [
     icon: '🌬️',
     image: images.ac,
   },
-  /*
-  {
-    title: 'Free Parking',
-    description: 'Convenient parking at 122 Hendala Rd, Wattala so your workout starts stress-free.',
-    icon: '🅿️',
-    image: images.groupFitness,
-  },
-  */
   {
     title: 'Fresh Water Station',
     description: 'Hydration on tap — because every queen needs her water breaks.',
@@ -38,5 +30,11 @@ export const amenities = [
     description: 'A welcoming corner to connect, stretch, and celebrate your progress together.',
     icon: '🤝',
     image: images.celebration,
+  },
+  {
+    title: 'Cool-Down Stretch Zone',
+    description: 'A calm corner to stretch, recover, and leave every class feeling lighter and stronger.',
+    icon: '🧘',
+    image: images.stretch,
   },
 ];

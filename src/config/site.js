@@ -11,7 +11,7 @@ export const SITE = {
   address: 'Fitness with Shyama, 122 Hendala Rd, Wattala, Sri Lanka',
   phone: '+94 75 045 1786',
   email: 'hello@fitwithshyama.xyz',
-  hours: 'Mon – Sat · 6:30 AM – 8:30 PM',
+  hours: 'Mon - Fri , 7.00 AM - 8.00 PM',
   mapsUrl: 'https://maps.app.goo.gl/Vi7vX3Dqo9A2QVJc6',
   mapsEmbedUrl:
     'https://maps.google.com/maps?q=Fitness+with+Shyama,+122+Hendala+Rd,+Wattala,+Sri+Lanka&output=embed',

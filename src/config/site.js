@@ -22,6 +22,7 @@ export const NAV_LINKS = [
   { label: 'Amenities', path: '/amenities' },
   { label: 'Packages', path: '/packages' },
   { label: 'About', path: '/about' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Contact', path: '/contact' },
 ];
 

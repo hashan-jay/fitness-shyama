@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NAV_LINKS, SITE } from '../../config/site';
+import { getLenis } from '../../utils/scroll';
 import Button from '../ui/Button';
 import './Navbar.css';
 
@@ -22,8 +23,18 @@ function Navbar({ onJoinClick }) {
   }, [location]);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    const lenis = getLenis();
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      lenis?.stop();
+    } else {
+      document.body.style.overflow = '';
+      lenis?.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      getLenis()?.start();
+    };
   }, [menuOpen]);
 
   return (
